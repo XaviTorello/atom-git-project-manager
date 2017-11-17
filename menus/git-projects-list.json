@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle git-projects-list",
+        "command": "git-projects-list:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Git Projects List",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "git-projects-list:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
