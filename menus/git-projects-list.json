@@ -2,6 +2,10 @@
   "context-menu": {
     "atom-text-editor": [
       {
+        "label": "Refresh available projects ",
+        "command": "git-projects-list:refresh_projects"
+      },
+      {
         "label": "Toggle git-projects-list",
         "command": "git-projects-list:toggle"
       }
@@ -12,8 +16,12 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "Git Projects List",
+          "label": "Git Projects Manager",
           "submenu": [
+            {
+              "label": "Refresh available projects",
+              "command": "git-projects-list:refresh_projects"
+            },
             {
               "label": "Toggle",
               "command": "git-projects-list:toggle"
