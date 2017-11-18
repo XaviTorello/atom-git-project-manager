@@ -1,11 +1,14 @@
 {
   "name": "git-projects-manager",
   "main": "./lib/git-projects-manager",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Identify all your git projects and provide quick project opening",
+  "author": "Xavi Torelló https://github.com/xavitorello",
   "keywords": [
+    "project",
+    "git",
   ],
-  "repository": "https://github.com/atom/git-projects-manager",
+  "repository": "https://github.com/XaviTorello/atom-git-project-manager",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
