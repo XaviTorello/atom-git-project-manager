@@ -5,9 +5,6 @@
   "description": "Identify all your git projects and provide quick project opening",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "git-projects-manager:toggle"
-  },
   "repository": "https://github.com/atom/git-projects-manager",
   "license": "MIT",
   "engines": {
