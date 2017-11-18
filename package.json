@@ -7,6 +7,7 @@
   "keywords": [
     "project",
     "git",
+    "atom-package"
   ],
   "repository": "https://github.com/XaviTorello/atom-git-project-manager",
   "license": "MIT",
