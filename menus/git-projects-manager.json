@@ -3,7 +3,7 @@
     "atom-text-editor": [
       {
         "label": "Refresh available projects ",
-        "command": "git-projects-manager:refresh_projects"
+        "command": "git-projects-manager:refreshProjects"
       },
       {
         "label": "Toggle git-projects-manager",
@@ -20,7 +20,7 @@
           "submenu": [
             {
               "label": "Refresh available projects",
-              "command": "git-projects-manager:refresh_projects"
+              "command": "git-projects-manager:refreshProjects"
             },
             {
               "label": "Toggle",
