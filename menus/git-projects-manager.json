@@ -4,10 +4,6 @@
       {
         "label": "Refresh available projects ",
         "command": "git-projects-manager:refreshProjects"
-      },
-      {
-        "label": "Toggle git-projects-manager",
-        "command": "git-projects-manager:toggle"
       }
     ]
   },
@@ -21,10 +17,6 @@
             {
               "label": "Refresh available projects",
               "command": "git-projects-manager:refreshProjects"
-            },
-            {
-              "label": "Toggle",
-              "command": "git-projects-manager:toggle"
             }
           ]
         }
