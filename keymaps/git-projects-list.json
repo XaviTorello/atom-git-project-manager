@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "git-projects-list:toggle"
+    "ctrl-alt-p": "git-projects-manager:toggle"
   }
 }

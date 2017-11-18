@@ -3,11 +3,11 @@
     "atom-text-editor": [
       {
         "label": "Refresh available projects ",
-        "command": "git-projects-list:refresh_projects"
+        "command": "git-projects-manager:refresh_projects"
       },
       {
-        "label": "Toggle git-projects-list",
-        "command": "git-projects-list:toggle"
+        "label": "Toggle git-projects-manager",
+        "command": "git-projects-manager:toggle"
       }
     ]
   },
@@ -20,11 +20,11 @@
           "submenu": [
             {
               "label": "Refresh available projects",
-              "command": "git-projects-list:refresh_projects"
+              "command": "git-projects-manager:refresh_projects"
             },
             {
               "label": "Toggle",
-              "command": "git-projects-list:toggle"
+              "command": "git-projects-manager:toggle"
             }
           ]
         }
