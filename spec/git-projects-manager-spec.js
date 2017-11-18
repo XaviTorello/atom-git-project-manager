@@ -1,44 +1,44 @@
 'use babel';
 
-import GitProjectsList from '../lib/git-projects-list';
+import GitProjectsManager from '../lib/git-projects-manager';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('GitProjectsList', () => {
+describe('GitProjectsManager', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('git-projects-list');
+    activationPromise = atom.packages.activatePackage('git-projects-manager');
   });
 
-  describe('when the git-projects-list:toggle event is triggered', () => {
+  describe('when the git-projects-manager:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.git-projects-list')).not.toExist();
+      expect(workspaceElement.querySelector('.git-projects-manager')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'git-projects-list:toggle');
+      atom.commands.dispatch(workspaceElement, 'git-projects-manager:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.git-projects-list')).toExist();
+        expect(workspaceElement.querySelector('.git-projects-manager')).toExist();
 
-        let gitProjectsListElement = workspaceElement.querySelector('.git-projects-list');
-        expect(gitProjectsListElement).toExist();
+        let gitProjectsManagerElement = workspaceElement.querySelector('.git-projects-manager');
+        expect(gitProjectsManagerElement).toExist();
 
-        let gitProjectsListPanel = atom.workspace.panelForItem(gitProjectsListElement);
-        expect(gitProjectsListPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'git-projects-list:toggle');
-        expect(gitProjectsListPanel.isVisible()).toBe(false);
+        let gitProjectsManagerPanel = atom.workspace.panelForItem(gitProjectsManagerElement);
+        expect(gitProjectsManagerPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'git-projects-manager:toggle');
+        expect(gitProjectsManagerPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('GitProjectsList', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.git-projects-list')).not.toExist();
+      expect(workspaceElement.querySelector('.git-projects-manager')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'git-projects-list:toggle');
+      atom.commands.dispatch(workspaceElement, 'git-projects-manager:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('GitProjectsList', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let gitProjectsListElement = workspaceElement.querySelector('.git-projects-list');
-        expect(gitProjectsListElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'git-projects-list:toggle');
-        expect(gitProjectsListElement).not.toBeVisible();
+        let gitProjectsManagerElement = workspaceElement.querySelector('.git-projects-manager');
+        expect(gitProjectsManagerElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'git-projects-manager:toggle');
+        expect(gitProjectsManagerElement).not.toBeVisible();
       });
     });
   });
